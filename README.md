@@ -17,7 +17,7 @@ Below a sample frame to illustrate.
 
 ![SampleFrame](/data/SampleImage.png)
 
-## Encoding strategy
+## Workflow
 - During all this procedure the camera/patient has to stay focused. looking away will stop it
 - The order with which objects are encoded is of increasing y-coordinates in the grid (in standard plt notation, where origin is in top-left angle of the image and y-axis increase in the bottom direction
   - if two objects have the same y-coordinate in the grid, the one with lowest X-coordinate goes first
@@ -28,6 +28,14 @@ Below a sample frame to illustrate.
 Here a short video to better showcase how it works
 
 ![Video](/data/combinedVideo.avi)
+
+## Encoding strategy
+the YOLO network used was trained on the [Coco](https://cocodataset.org/#home) dataset. Of the 80 categories, an encoding was defined for the most useful ones for everyday life. 
+For each of them, an unique encoding was defined. A stylized representation of the object was chosen when possible. 
+For example, for "laptop", the shown pattern would be:
+
+<img src="/data/laptop.png" width="250" height="280">
+
 
 ## Usage
 - YOLO weights are not included in this repo. you can download them from [darknet](https://pjreddie.com/darknet/yolo/)
